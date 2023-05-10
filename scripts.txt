@@ -1,0 +1,10 @@
+python -m venv env
+call env/Scripts/activate.bat
+pip install Django
+django-admin startproject settings .
+django-admin startapp enterprises_nsk
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python -m pip freeze > requirements.txt
+python manage.py runserver
